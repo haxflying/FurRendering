@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Deferred
-  m_Shader: {fileID: 4800000, guid: 9d38ed17a483a7e4899019d42e94bbd0, type: 3}
+  m_Name: Forward
+  m_Shader: {fileID: 4800000, guid: 72ae877f34dd94d4ba0de952992cb3a8, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -60,11 +60,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _BumpScale: 1
-    - _CutOff: 0.194
+    - _CutOff: 0.249
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _FurLength: 0.0766
+    - _FurLength: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -82,4 +82,4 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SpecularColor: {r: 0.1981132, g: 0.1981132, b: 0.1981132, a: 1}
+    - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
