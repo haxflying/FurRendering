@@ -53,7 +53,7 @@
 		o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
 		o.WorldNormal = UnityObjectToWorldNormal(v.normal);
 		o.screenPos = ComputeScreenPos(o.vertex);
-		o.direction = mul(unity_ObjectToWorld, dir);
+		o.direction = UnityObjectToWorldDir(dir);
 		o.worldPos = mul(unity_ObjectToWorld, v.vertex);
 
 		#ifdef DYNAMICLIGHTMAP_ON
