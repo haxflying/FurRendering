@@ -269,9 +269,19 @@ namespace TOZEditor {
 					//Draw paint brush
 					if(Physics.Raycast(ray, out hit, float.MaxValue)) {
 						if(hit.transform == go.transform) {
-							Handles.color = new Color(gui_BrushColor.r, gui_BrushColor.g, gui_BrushColor.b, 1.0f);
-							Handles.DrawWireDisc(hit.point, hit.normal, gui_BrushSize);
-						}
+                                Color brushColor = new Color(gui_BrushColor.r, gui_BrushColor.g, gui_BrushColor.b, 1.0f);
+                                Handles.color = new Color(gui_BrushColor.r, gui_BrushColor.g, gui_BrushColor.b, 1.0f);
+                                Handles.DrawWireDisc(hit.point, hit.normal, gui_BrushSize);
+                                Handles.color = Color.red;
+                                Handles.DrawLine(hit.point, hit.point + Vector3.right);
+                                Handles.color = Color.green;
+                                Handles.DrawLine(hit.point, hit.point + Vector3.up);
+                                Handles.color = Color.blue;
+                                Handles.DrawLine(hit.point, hit.point + Vector3.forward);
+                                Vector3 dir = new Vector3(brushColor.r, brushColor.g, brushColor.b) * 2f - Vector3.one;
+                                Quaternion rotation = Quaternion.LookRotation(dir);
+                                Handles.ArrowHandleCap(controlID, hit.point, rotation, gui_BrushSize / 2f, EventType.Repaint);
+                            }
 					}
 					HandleUtility.Repaint();
 				}
